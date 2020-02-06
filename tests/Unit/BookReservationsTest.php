@@ -59,7 +59,6 @@ class BookReservationsTest extends TestCase
         $user = factory(User::class)->create();
         $book->checkout($user);
         $book->checkin($user);
-
         $book->checkout($user);
 
         $this->assertCount(2, Reservation::all());
